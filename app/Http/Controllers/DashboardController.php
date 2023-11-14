@@ -9,7 +9,29 @@ class DashboardController extends Controller
 
     public function index() {
 
-        return view('dashboard');
+        $users = [
+            [
+                'name' => 'Piet',
+                'age' => 30,
+            ],
+            [
+                'name' => 'Klaas',
+                'age' => 25,
+            ],
+            [
+                'name' => 'Albert',
+                'age' => 17,
+            ]
+            ];
+
+        return view(
+            'dashboard',
+            [
+                'users' => $users
+            ]
+
+    );
+
     }
 
 }
